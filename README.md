@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+Loja Online React com JSON Server
+Este é um projeto de uma loja online simples, desenvolvido com React e JSON Server. A aplicação consome dados de uma API REST simulada, fornecendo uma interface onde os usuários podem visualizar produtos, adicionar ao carrinho e visualizar o resumo do carrinho antes de finalizar a compra.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Funcionalidades
+Listagem de Produtos: Exibe uma lista de produtos disponíveis para compra.
 
-## Available Scripts
+Detalhes do Produto: Exibe informações detalhadas de cada produto.
 
-In the project directory, you can run:
+Carrinho de Compras: Permite adicionar e remover produtos do carrinho.
 
-### `npm start`
+Resumo do Carrinho: Mostra um resumo dos itens no carrinho e o valor total da compra.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Responsividade: O layout é totalmente responsivo e funciona bem tanto em dispositivos móveis quanto em desktops.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Tecnologias Usadas
+React: Biblioteca JavaScript para construir interfaces de usuário.
 
-### `npm test`
+JSON Server: Ferramenta para criar uma API REST fake a partir de um arquivo JSON.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Axios: Cliente HTTP para fazer requisições à API.
 
-### `npm run build`
+CSS: Estilização do layout, utilizando Flexbox e Grid para tornar o site responsivo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Estrutura do Projeto
+bash
+Copiar
+Editar
+/loja-online
+  /node_modules
+  /public
+  /src
+    App.js
+    App.css           <-- Arquivo CSS com o estilo moderno e responsivo
+    /components
+      Carrinho.js
+      Produto.js
+      ListaProdutos.js
+  dbTeste.json        <-- Arquivo JSON com os dados dos produtos
+  package.json
+  package-lock.json
+  ...
+Como Rodar o Projeto
+Siga os passos abaixo para rodar o projeto localmente:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone o repositório:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/loja-online.git
+cd loja-online
+Instale as dependências:
+Se ainda não tiver o Node.js instalado, faça o download e instale a versão mais recente de Node.js.
+Depois, no diretório do projeto, execute:
 
-### `npm run eject`
+bash
+Copiar
+Editar
+npm install
+Rodar o JSON Server:
+O projeto utiliza o JSON Server para simular uma API REST. Antes de rodar o React, execute o JSON Server no terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copiar
+Editar
+json-server --watch dbTeste.json --port 5000
+Isso irá iniciar a API simulada na URL http://localhost:5000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Rodar o aplicativo React:
+No diretório do projeto, inicie o servidor de desenvolvimento do React:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+Copiar
+Editar
+npm start
+O aplicativo será aberto automaticamente no navegador em http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Como Funciona a Aplicação
+Página inicial: Ao carregar a página, o aplicativo faz uma requisição à API (simulada com o JSON Server) para buscar a lista de produtos.
 
-## Learn More
+Adicionar ao Carrinho: O usuário pode clicar no botão "Adicionar ao Carrinho" para incluir um produto no carrinho de compras. O item será adicionado ao estado do aplicativo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Remover do Carrinho: O usuário pode remover um produto do carrinho clicando no botão "Remover" ao lado do item no carrinho.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Resumo do Carrinho: O carrinho exibe os produtos selecionados e o valor total da compra.
 
-### Code Splitting
+Estrutura de Dados
+O arquivo dbTeste.json contém uma lista de produtos com as seguintes propriedades:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+id: Identificador único do produto.
 
-### Analyzing the Bundle Size
+nome: Nome do produto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+descricao: Descrição do produto.
 
-### Making a Progressive Web App
+preco: Preço do produto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+imagem: URL da imagem do produto.
 
-### Advanced Configuration
+Exemplo de produto no arquivo JSON:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+json
+Copiar
+Editar
+{
+  "id": 1,
+  "nome": "Camiseta Preta",
+  "descricao": "Camiseta básica preta, 100% algodão.",
+  "preco": 49.99,
+  "imagem": "https://via.placeholder.com/150"
+}
+Como Personalizar
+Adicionar novos produtos: Para adicionar novos produtos, basta adicionar mais objetos dentro do array de produtos no arquivo dbTeste.json.
 
-### Deployment
+Alterar o estilo: Você pode modificar o arquivo App.css para personalizar a aparência do site conforme sua preferência.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Links Úteis
+React Documentation
 
-### `npm run build` fails to minify
+JSON Server Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Axios Documentation
