@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ListaProdutos from './components/ListaProdutos';
+import Carrinho from './components/Carrinho';
+import './App.css'; 
 
 function App() {
+  const [produtos, setProdutos] = useState([]);
+  const [carrinho, setCarrinho] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/produtos')
+      .then(response => setProdutos(response.data));
+  }, []);
+
+  const adicionarAoCarrinho = (produto) => {
+    setCarrinho([...carrinho, produto]);
+  };
+
+  const removerDoCarrinho = (produtoId) => {
+    setCarrinho(carrinho.filter(item => item.id !== produtoId));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Loja Online</h1>
+      <ListaProdutos produtos={produtos} adicionarAoCarrinho={adicionarAoCarrinho} />
+      <Carrinho carrinho={carrinho} removerDoCarrinho={removerDoCarrinho} />
     </div>
   );
 }

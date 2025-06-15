@@ -1,0 +1,26 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "Camiseta Preta",
+        "descricao": "Camiseta básica preta, 100% algodão.",
+        "preco": 49.99,
+        "imagem": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 2,
+        "nome": "Calça Jeans",
+        "descricao": "Calça jeans clássica, modelo slim.",
+        "preco": 89.99,
+        "imagem": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 3,
+        "nome": "Tênis Branco",
+        "descricao": "Tênis casual branco, confortável e moderno.",
+        "preco": 129.99,
+        "imagem": "https://via.placeholder.com/150"
+      }
+    ]
+  }
+  
