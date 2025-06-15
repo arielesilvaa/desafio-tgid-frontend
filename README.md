@@ -1,54 +1,54 @@
-Loja Online React com JSON Server
-Este é um projeto de uma loja online simples, desenvolvido com React e JSON Server. A aplicação consome dados de uma API REST simulada, fornecendo uma interface onde os usuários podem visualizar produtos, adicionar ao carrinho e visualizar o resumo do carrinho antes de finalizar a compra.
+# Loja Online React com JSON Server
 
-Funcionalidades
-Listagem de Produtos: Exibe uma lista de produtos disponíveis para compra.
 
-Detalhes do Produto: Exibe informações detalhadas de cada produto.
+![Uploading Captura de Tela 2025-06-14 às 22.45.29.png…]()
 
-Carrinho de Compras: Permite adicionar e remover produtos do carrinho.
+Este é um projeto de uma **loja online simples**, desenvolvido com **React** e **JSON Server**. A aplicação consome dados de uma **API REST simulada**, fornecendo uma interface onde os usuários podem visualizar produtos, adicionar ao carrinho e visualizar o resumo do carrinho antes de finalizar a compra.
 
-Resumo do Carrinho: Mostra um resumo dos itens no carrinho e o valor total da compra.
+## Funcionalidades
 
-Responsividade: O layout é totalmente responsivo e funciona bem tanto em dispositivos móveis quanto em desktops.
+- **Listagem de Produtos**: Exibe uma lista de produtos disponíveis para compra.
+- **Detalhes do Produto**: Exibe informações detalhadas de cada produto.
+- **Carrinho de Compras**: Permite adicionar e remover produtos do carrinho.
+- **Resumo do Carrinho**: Mostra um resumo dos itens no carrinho e o valor total da compra.
+- **Responsividade**: O layout é totalmente responsivo e funciona bem tanto em dispositivos móveis quanto em desktops.
 
-Tecnologias Usadas
-React: Biblioteca JavaScript para construir interfaces de usuário.
+## Tecnologias Usadas
 
-JSON Server: Ferramenta para criar uma API REST fake a partir de um arquivo JSON.
+- **React**: Biblioteca JavaScript para construir interfaces de usuário.
+- **JSON Server**: Ferramenta para criar uma API REST fake a partir de um arquivo JSON.
+- **Axios**: Cliente HTTP para fazer requisições à API.
+- **CSS**: Estilização do layout, utilizando Flexbox e Grid para tornar o site responsivo.
 
-Axios: Cliente HTTP para fazer requisições à API.
+## Estrutura do Projeto
 
-CSS: Estilização do layout, utilizando Flexbox e Grid para tornar o site responsivo.
+/loja-online
+/node_modules
+/public
+/src
+App.js
+App.css <-- Arquivo CSS com o estilo moderno e responsivo
+/components
+Carrinho.js
+Produto.js
+ListaProdutos.js
+dbTeste.json <-- Arquivo JSON com os dados dos produtos
+package.json
+package-lock.json
+...
 
-Estrutura do Projeto
 bash
 Copiar
 Editar
-/loja-online
-  /node_modules
-  /public
-  /src
-    App.js
-    App.css           <-- Arquivo CSS com o estilo moderno e responsivo
-    /components
-      Carrinho.js
-      Produto.js
-      ListaProdutos.js
-  dbTeste.json        <-- Arquivo JSON com os dados dos produtos
-  package.json
-  package-lock.json
-  ...
-Como Rodar o Projeto
+
+## Como Rodar o Projeto
+
 Siga os passos abaixo para rodar o projeto localmente:
 
-Clone o repositório:
-
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/loja-online.git
-cd loja-online
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/loja-online.git
+   cd loja-online
 Instale as dependências:
 Se ainda não tiver o Node.js instalado, faça o download e instale a versão mais recente de Node.js.
 Depois, no diretório do projeto, execute:
@@ -120,3 +120,21 @@ React Documentation
 JSON Server Documentation
 
 Axios Documentation
+
+yaml
+Copiar
+Editar
+
+---
+
+### Como usar:
+
+1. Crie um arquivo chamado **`README.md`** dentro do diretório raiz do seu repositório GitHub (onde está o código do seu projeto).
+2. Copie e cole o conteúdo acima no arquivo **`README.md`**.
+3. Commit e envie o arquivo para o repositório no GitHub.
+
+```bash
+git add README.md
+git commit -m "Adiciona README explicativo"
+git push origin main
+Ao acessar o seu repositório no GitHub, o README.md será automaticamente renderizado com a formatação que inclui parágrafos, listas e blocos de código.
