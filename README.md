@@ -1,6 +1,7 @@
 # Loja Online React com JSON Server
 
 
+
 ![Uploading Captura de Tela 2025-06-14 às 22.45.29.png…]()
 
 Este é um projeto de uma **loja online simples**, desenvolvido com **React** e **JSON Server**. A aplicação consome dados de uma **API REST simulada**, fornecendo uma interface onde os usuários podem visualizar produtos, adicionar ao carrinho e visualizar o resumo do carrinho antes de finalizar a compra.
