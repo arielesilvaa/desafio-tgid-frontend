@@ -1,8 +1,11 @@
 # Loja Online React com JSON Server
 
+# Desafio Técnico -  Front-End | TGID
 
 
-![Uploading Captura de Tela 2025-06-14 às 22.45.29.png…]()
+
+![Captura de Tela 2025-06-14 às 22 45 29](https://github.com/user-attachments/assets/0089f633-725e-4fce-be22-5fd6a8181d92)
+
 
 Este é um projeto de uma **loja online simples**, desenvolvido com **React** e **JSON Server**. A aplicação consome dados de uma **API REST simulada**, fornecendo uma interface onde os usuários podem visualizar produtos, adicionar ao carrinho e visualizar o resumo do carrinho antes de finalizar a compra.
 
